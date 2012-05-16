@@ -1,11 +1,11 @@
 #!/usr/bin/eruby
 <%
 #load required files
-require 'iDrive.rb'
+require 'iDriveSync.rb'
 require 'rexml/document'
 
 #create library instance
-myapi = IDrive::IDriveAPI.new('delray_davis','vXpt952LZ')
+myapi = IDrive::IDriveSyncAPI.new('delray_davis','vXpt952LZ')
 
 #set parameters for the function
 parameters = {}
