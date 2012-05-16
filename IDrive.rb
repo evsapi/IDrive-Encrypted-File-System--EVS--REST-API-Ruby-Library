@@ -7,7 +7,7 @@ module IDriveSync
                 def initialize(uid,pwd)
                         @uid, @pwd = uid, pwd
 
-                        uri = URI.parse("https://www.idrivesync.com/")
+                        uri = URI.parse("https://www.idrivesync.com/evs")
                         http = Net::HTTP.new(uri.host, uri.port)
                         http.use_ssl = true
                         http.verify_mode = OpenSSL::SSL::VERIFY_NONE
@@ -21,7 +21,7 @@ module IDriveSync
                 end
                 def execute(page, parameters)
 			if page == 'getServerAddress'
-				uri = URI.parse("https://www.idrivesync.com/")
+				uri = URI.parse("https://www.idrivesync.com/evs")
 			else
                         	uri = URI.parse("https://"+@base_url)
 			end
